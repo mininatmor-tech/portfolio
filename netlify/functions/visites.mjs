@@ -15,7 +15,7 @@ const json = (donnees, status = 200) =>
   });
 
 export default async (req) => {
-  const attendu = process.env.TRACKER_TOKEN;
+  const attendu = "TRAKER";
   if (!attendu) return json({ erreur: "TRACKER_TOKEN n'est pas défini sur Netlify." }, 503);
 
   const recu = (req.headers.get("authorization") || "").replace(/^Bearer\s+/i, "");
