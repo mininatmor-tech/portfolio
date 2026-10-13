@@ -1,0 +1,79 @@
+/* ===== Bascule de thème : classique <-> Kirby (chargé dans les deux modes) ===== */
+
+/* Formulaire : le simple en mode classique, celui de Kirby en mode Kirby */
+.kirby-panel { display: none; }
+html.kirby .kirby-panel { display: block; }
+html.kirby form.contact { display: none; }
+
+/* Mention discrète sous le footer */
+.mention-stats { display: block; margin-top: 8px; font-family: var(--font-sans, sans-serif); font-size: 12px; font-weight: 400; opacity: .6; }
+
+/* Mascotte Kirby des pages détail (visible seulement en mode Kirby) */
+.kirby-deco { display: none !important; }
+
+/* Bouton de bascule */
+#mode-toggle {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: 1px solid var(--line, #272C3E);
+  background: var(--bg, #EAEFF4);
+  color: var(--text, #272C3E);
+  box-shadow: 4px 4px 0 rgba(39, 44, 62, .12);
+  font-family: var(--font-sans, 'Lato', sans-serif);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background .2s, color .2s, transform .15s;
+}
+#mode-toggle img { width: 20px; height: 24px; object-fit: contain; display: block; }
+#mode-toggle:hover, #mode-toggle:focus-visible { background: var(--text, #272C3E); color: var(--bg, #EAEFF4); outline: none; }
+#mode-toggle:active { transform: scale(.96); }
+
+html.kirby #mode-toggle {
+  border: 3px solid #c2185b;
+  border-radius: 30px;
+  background: #c2185b;
+  color: #fff;
+  box-shadow: 0 6px 10px rgba(74, 13, 36, .2);
+  font-family: 'Fredoka', 'Trebuchet MS', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: .5px;
+  text-transform: none;
+}
+html.kirby #mode-toggle:hover, html.kirby #mode-toggle:focus-visible { background: #fff; color: #c2185b; }
+
+/* La souris devient un Kirby (uniquement en mode Kirby, avec une vraie souris) */
+#kirby-curseur { display: none; }
+html.kirby-curseur #kirby-curseur {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 46px;
+  pointer-events: none;
+  z-index: 2147483647;
+  opacity: 0;
+  transition: opacity .15s;
+  will-change: transform;
+}
+html.kirby-curseur #kirby-curseur.visible { opacity: 1; }
+#kirby-curseur img { display: block; width: 100%; height: auto; transition: transform .12s ease-out; transform-origin: 50% 60%; }
+#kirby-curseur.survol img { transform: scale(1.22) rotate(-8deg); }
+#kirby-curseur.clic img { transform: scale(.82); }
+html.kirby-curseur, html.kirby-curseur * { cursor: none !important; }
+
+@media (max-width: 768px) {
+  #mode-toggle { right: 12px; bottom: 12px; padding: 9px 14px; font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #kirby-curseur img, #mode-toggle { transition: none; }
+}

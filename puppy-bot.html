@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Puppy — Mathys</title>
+  <meta name="description" content="Bot Discord Puppy développé en JavaScript avec discord.js : économie, roleplay et utilitaires" />
+  <link rel="stylesheet" href="style.css" id="css-base">
+  <link rel="stylesheet" href="style-kirby.css" id="css-kirby" media="not all">
+  <link rel="stylesheet" href="theme.css">
+  <script>try{if(localStorage.getItem("portfolio-mode")==="kirby"){document.documentElement.classList.add("kirby");document.getElementById("css-base").media="not all";document.getElementById("css-kirby").media="all"}}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="bg-shape shape-tl">
+    <svg viewBox="0 0 200 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M-10,40 C50,60 80,10 100,-10" fill="none" stroke="#2c3545" stroke-width="0.8"/>
+      <path d="M-10,80 C60,100 120,40 140,-10" fill="none" stroke="#2c3545" stroke-width="0.8"/>
+    </svg>
+  </div>
+  <div class="bg-shape shape-bl">
+    <svg viewBox="0 0 200 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M-10,120 C60,120 80,160 120,210" fill="none" stroke="#2c3545" stroke-width="0.8"/>
+      <path d="M-10,160 C40,160 60,190 80,210" fill="none" stroke="#2c3545" stroke-width="0.8"/>
+    </svg>
+  </div>
+  <div class="bg-shape shape-br">
+    <svg viewBox="0 0 200 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M210,60 C150,80 120,140 80,210" fill="none" stroke="#2c3545" stroke-width="0.8"/>
+      <path d="M210,110 C160,120 140,170 120,210" fill="none" stroke="#2c3545" stroke-width="0.8"/>
+      <path d="M210,160 C180,165 170,190 160,210" fill="none" stroke="#2c3545" stroke-width="0.8"/>
+    </svg>
+  </div>
+  <div class="top-bar-wrapper">
+    <div class="top-line"></div>
+    <div class="top-text">#PORTFOLIO2026</div>
+  </div>
+  <nav>
+    <div class="nav-inner">
+      <div class="logo">Mathys.</div>
+      <div class="nav-links">
+        <a href="index.html#about">À propos</a>
+        <a href="index.html#skills">Compétences</a>
+        <a href="index.html#projects">Projets</a>
+        <a href="index.html#cv">CV</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap project-detail">
+    <img class="kirby-deco" src="kirby/repos.png" alt="">
+
+    <div class="project-header">
+      <h1 class="titre-Le-chat">Puppy</h1>
+      <p classe="test">Bot Discord complet en JavaScript : économie, roleplay et outils de gestion de serveur</p>
+    </div>
+      <div class="tech-stack">
+        <span class="tech-badge">Node.js</span>
+        <span class="tech-badge">JavaScript (ES Modules)</span>
+        <span class="tech-badge">discord.js v14</span>
+        <span class="tech-badge">MySQL</span>
+      </div>
+    </div>
+
+    <div style="margin: 2rem 0; border-radius: 0.5rem; overflow: hidden;">
+      <img src="bot.jpg" alt="Puppy Discord Bot" class="img-chat">
+    </div>
+
+    <section class="features-section">
+      <h2>À propos du projet</h2>
+      <p>
+        Puppy est un bot Discord écrit en JavaScript moderne (Node.js, ES Modules) avec la bibliothèque
+        discord.js v14. Toutes ses commandes fonctionnent à la fois en préfixe classique (<code>p/</code>)
+        et en Slash (<code>/</code>), aussi bien sur serveur qu'en messages privés. Il combine un système
+        d'économie complet, des commandes de roleplay interactives et des outils utilitaires pour les
+        administrateurs de serveur.
+      </p>
+    </section>
+
+    <section class="features-section">
+      <h2>Fonctionnalités principales</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Économie</h3>
+          <p>Un système économique complet avec portefeuille et compte en banque :</p>
+          <ul class="feature-list">
+            <li>Prime quotidienne et travail rémunéré</li>
+            <li>Dépôt / retrait bancaire</li>
+            <li>Boutique, achat et vente de ressources</li>
+            <li>Pêche et minage (avec cooldowns)</li>
+            <li>Cambriolage entre joueurs</li>
+            <li>Inventaire détaillé</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <h3>Roleplay interactif</h3>
+          <p>Des commandes sociales avec boutons de réponse :</p>
+          <ul class="feature-list">
+            <li>hug, pat, kiss, slap, cuddle</li>
+            <li>Bouton "Rendre l'action" exclusif à la cible</li>
+            <li>sleep avec réponse interactive ("Dormir ensemble")</li>
+            <li>Actions solo comme cry</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <h3>Outils utilitaires</h3>
+          <p>Des commandes pour la gestion et l'information du serveur :</p>
+          <ul class="feature-list">
+            <li>help contextuel par commande</li>
+            <li>ping (latence bot / passerelle)</li>
+            <li>serverinfo et userinfo</li>
+            <li>setwelcome pour le message de bienvenue</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <h3>Double interface de commandes</h3>
+          <p>Une abstraction unifiée pour préfixe et slash :</p>
+          <ul class="feature-list">
+            <li>Support préfixe (p/) et Slash (/)</li>
+            <li>Fonctionne en serveur et en MP</li>
+            <li>Contexte de commande unifié (CommandContext)</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <h3>Persistance des données</h3>
+          <p>Une couche de base de données robuste :</p>
+          <ul class="feature-list">
+            <li>Base de données MySQL en production</li>
+            <li>Fallback automatique sur database.json</li>
+            <li>Migration transparente entre les deux</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <h3>Architecture modulaire</h3>
+          <p>Un code organisé et facile à faire évoluer :</p>
+          <ul class="feature-list">
+            <li>Commandes séparées par catégorie</li>
+            <li>Événements Discord isolés (ready, messageCreate, interactionCreate)</li>
+            <li>Déploiement des Slash commands via script dédié</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="architecture">
+      <h3>Architecture technique</h3>
+      <p>
+        Puppy est organisé en modules clairs : <strong>commands/</strong> (économie, roleplay, utilitaires),
+        <strong>events/</strong> (cycle de vie du bot et gestion des interactions), et <strong>utils/</strong>
+        (contexte de commande unifié, appels API pour les gifs animés, formatage des durées).
+      </p>
+      <ul style="margin: 1rem 0 0 1.5rem;">
+        <li>Chargement dynamique des commandes et événements</li>
+        <li>Synchronisation des Slash commands via l'API REST de Discord</li>
+        <li>Configuration centralisée (boutique, jobs, ressources) dans constants.js</li>
+        <li>Bascule automatique MySQL / JSON selon la disponibilité de la base</li>
+      </ul>
+    </section>
+
+    <section class="features-section">
+      <h2>Technologies utilisées</h2>
+      <ul style="line-height: 2;">
+        <li><strong>Node.js</strong> : Environnement d'exécution JavaScript</li>
+        <li><strong>discord.js v14</strong> : Bibliothèque pour l'intégration Discord</li>
+        <li><strong>MySQL</strong> : Base de données pour la persistance des données</li>
+        <li><strong>JSON</strong> : Stockage de secours et configuration</li>
+      </ul>
+    </section>
+
+    <section class="features-section">
+      <h2>Apprentissages clés</h2>
+      <p>
+        Ce projet m'a permis de développer mes compétences en :
+      </p>
+      <ul style="line-height: 2; margin-left: 1.5rem;">
+        <li>Développement d'un bot Discord multi-interfaces (préfixe et Slash)</li>
+        <li>Conception d'un système économique avec cooldowns et persistance</li>
+        <li>Intégration d'une base de données MySQL avec repli automatique</li>
+        <li>Gestion d'interactions Discord (boutons, réponses différées)</li>
+        <li>Organisation d'un projet Node.js modulaire et maintenable</li>
+      </ul>
+    </section>
+
+    <section class="features-section">
+      <div class="project-links">
+        <a href="index.html#contact" class="btn-primary">Me contacter</a>
+      </div>
+    </section>
+    <a class="btn" href="index.html#projects">← Retour aux projets</a>
+  </main>
+
+  <footer>
+    © 2026 — Mathys<small class="mention-stats">Statistiques de visite anonymes (page, pays, heure), sans cookies ni adresse IP.</small>
+  </footer>
+  <script src="theme.js"></script>
+  <script src="tracker.js" defer></script>
+</body>
+</html>

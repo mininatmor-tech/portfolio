@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Mathys</title>
+  <meta name="description" content="Portfolio de Mathys — développement, jeux vidéo, informatique" />
+  <link rel="stylesheet" href="style.css" id="css-base">
+  <link rel="stylesheet" href="style-kirby.css" id="css-kirby" media="not all">
+  <link rel="stylesheet" href="theme.css">
+  <script>try{if(localStorage.getItem("portfolio-mode")==="kirby"){document.documentElement.classList.add("kirby");document.getElementById("css-base").media="not all";document.getElementById("css-kirby").media="all"}}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="bg-shape shape-tl">
+    <svg viewBox="0 0 200 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M-10,40 C50,60 80,10 100,-10" fill="none" stroke="#2c3545" stroke-width="0.8"/>
+      <path d="M-10,80 C60,100 120,40 140,-10" fill="none" stroke="#2c3545" stroke-width="0.8"/>
+    </svg>
+  </div>
+  <div class="bg-shape shape-bl">
+    <svg viewBox="0 0 200 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M-10,120 C60,120 80,160 120,210" fill="none" stroke="#2c3545" stroke-width="0.8"/>
+      <path d="M-10,160 C40,160 60,190 80,210" fill="none" stroke="#2c3545" stroke-width="0.8"/>
+    </svg>
+  </div>
+  <div class="bg-shape shape-br">
+    <svg viewBox="0 0 200 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M210,60 C150,80 120,140 80,210" fill="none" stroke="#2c3545" stroke-width="0.8"/>
+      <path d="M210,110 C160,120 140,170 120,210" fill="none" stroke="#2c3545" stroke-width="0.8"/>
+      <path d="M210,160 C180,165 170,190 160,210" fill="none" stroke="#2c3545" stroke-width="0.8"/>
+    </svg>
+  </div>
+  <div class="top-bar-wrapper">
+    <div class="top-line"></div>
+    <div class="top-text">#PORTFOLIO2026</div>
+  </div>
+  <nav>
+    <div class="nav-inner">
+      <div class="logo">Mathys.</div>
+      <div class="nav-links">
+        <a href="#about">À propos</a>
+        <a href="#skills">Compétences</a>
+        <a href="#projects">Projets</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <header class="hero wrap">
+    <div class="hero-content-wrapper">
+      <div class="hero-main">
+        <h1>Mathys<br>Payet <span class="divider">|</span></h1>
+        <div class="hero-desc">
+          <p>Bonjour, je m'appelle Mathys Payet. Je suis élève en seconde TNE(Transision numerique et energetique). Passionné par l'informatique et les nouvelles technologies, je souhaite poursuivre mes études en Bac Pro CIEL afin de développer mes compétences dans les réseaux, l'électronique et l'informatique.</p>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="photo.jpg" alt="Photo de Mathys Payet">
+      </div>
+    </div>
+  </header>
+  <section id="about" class="wrap">
+    <h2>À propos</h2>
+    <div class="content-box">
+      <p>Je m'appelle Mathys. J'aime apprendre à programmer, créer des jeux vidéo, comprendre comment fonctionnent les ordinateurs et les logiciels. Je passe beaucoup de temps sur des projets pour progresser. Objectif : travailler dans le réseaux ou l'audiovisuel.</p>
+    </div>
+  </section>
+  <section id="skills" class="wrap">
+    <h2>Compétences</h2>
+    <div class="skills">
+      <div class="skill">HTML / CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Python</div>
+      <div class="skill">Unity / C#</div>
+      <div class="skill">MySQL</div>
+    </div>
+  </section>
+  <section id="projects" class="wrap">
+    <h2>Projets</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Jeu de plateforme</h3>
+        <p>Mini jeu créé avec Unity : déplacements, sauts, ennemis et pièces à collecter.</p>
+        <a class="btn" href="jeux-plateforme.html">Voir le projet</a>
+      </div>
+      <div class="project">
+        <h3>Le Chat - Bot Discord</h3>
+        <p>Bot complet en JavaScript (discord.js) avec modération, automod, niveaux, vocaux, tickets et abonnements.</p>
+        <a class="btn" href="le-chat-bot.html">Voir le projet</a>
+      </div>
+      <div class="project">
+        <h3>Puppy - Bot Discord</h3>
+        <p>Bot en JavaScript (discord.js) avec économie, roleplay interactif et outils utilitaires, en préfixe et Slash.</p>
+        <a class="btn" href="puppy-bot.html">Voir le projet</a>
+      </div>
+    </div>
+  </section>
+  <section id="cv" class="wrap">
+    <h2>CV</h2>
+    <div class="content-box">
+      <p>Retrouve mon CV complet au format PDF.</p>
+      <a class="btn" href="cv.pdf" target="_blank" rel="noopener">Voir mon CV</a>
+    </div>
+  </section>
+  <section id="contact" class="wrap">
+    <h2>Contact</h2>
+    <form class="contact" action="https://formsubmit.co/payet.mathys.pro@gmail.com" method="POST">
+      <input type="text" name="nom" placeholder="Ton nom" required />
+      <input type="email" name="email" placeholder="Ton e-mail" required />
+      <textarea name="message" placeholder="Ton message" rows="5" required></textarea>
+      <input type="hidden" name="_next" value="#">
+      <input type="hidden" name="_captcha" value="false">
+      <button type="submit">Envoyer</button>
+    </form>
+    <div class="kirby-panel">
+      <form class="kirby-form" id="contact-form" action="https://formsubmit.co/payet.mathys.pro@gmail.com" method="POST" novalidate>
+        <div class="scene repos" id="scene">
+          <div class="nuage">
+            <svg class="nuage-forme" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <g fill="#fff">
+                <rect x="7" y="12" width="86" height="76" rx="14"/>
+                <ellipse cx="22" cy="17" rx="17" ry="13"/>
+                <ellipse cx="42" cy="13" rx="18" ry="12"/>
+                <ellipse cx="64" cy="15" rx="18" ry="13"/>
+                <ellipse cx="82" cy="19" rx="15" ry="12"/>
+                <ellipse cx="20" cy="83" rx="17" ry="13"/>
+                <ellipse cx="42" cy="87" rx="18" ry="12"/>
+                <ellipse cx="64" cy="85" rx="18" ry="13"/>
+                <ellipse cx="82" cy="81" rx="15" ry="12"/>
+                <ellipse cx="10" cy="35" rx="10" ry="14"/>
+                <ellipse cx="10" cy="62" rx="10" ry="15"/>
+                <ellipse cx="90" cy="38" rx="10" ry="14"/>
+                <ellipse cx="90" cy="64" rx="10" ry="14"/>
+              </g>
+            </svg>
+
+            <div class="contenu">
+              <div class="groupe">
+                <label for="nom">Nom</label>
+                <div class="champ">
+                  <input id="nom" name="nom" type="text" autocomplete="name" spellcheck="false" required>
+                  <svg class="etoile-champ" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.8-6.3 3.8 1.7-7L2 9.2l7.1-.6z"/></svg>
+                  <svg class="etoile-jaune" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.8-6.3 3.8 1.7-7L2 9.2l7.1-.6z"/></svg>
+                </div>
+              </div>
+
+              <div class="groupe">
+                <label for="email">Email</label>
+                <div class="champ">
+                  <input id="email" name="email" type="text" inputmode="email" autocomplete="email" spellcheck="false" required>
+                  <svg class="etoile-champ" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.8-6.3 3.8 1.7-7L2 9.2l7.1-.6z"/></svg>
+                  <svg class="etoile-jaune" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.8-6.3 3.8 1.7-7L2 9.2l7.1-.6z"/></svg>
+                </div>
+              </div>
+
+              <div class="groupe">
+                <label for="message-texte">Message</label>
+                <div class="champ">
+                  <textarea id="message-texte" name="message" rows="3" required></textarea>
+                  <svg class="etoile-champ" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.8-6.3 3.8 1.7-7L2 9.2l7.1-.6z"/></svg>
+                  <svg class="etoile-jaune" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.8-6.3 3.8 1.7-7L2 9.2l7.1-.6z"/></svg>
+                </div>
+              </div>
+
+              <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio">
+              <input type="hidden" name="_next" value="#">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="text" name="_honey" class="piege" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+              <button type="submit" class="envoyer">Envoyer</button>
+              <p id="message" role="alert" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <img id="kirby" alt="Kirby" src="kirby/repos.png">
+        </div>
+      </form>
+    </div>
+  </section>
+  <footer>
+    © 2026 — Mathys<small class="mention-stats">Statistiques de visite anonymes (page, pays, heure), sans cookies ni adresse IP.</small>
+  </footer>
+
+  <script src="kirby-contact.js"></script>
+  <script src="theme.js"></script>
+  <script src="tracker.js" defer></script>
+</body>
+</html>

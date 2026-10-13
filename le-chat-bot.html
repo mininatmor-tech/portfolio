@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Le Chat Bot — Mathys</title>
+  <meta name="description" content="Bot Discord complet développé en JavaScript (discord.js) avec modération, automod, niveaux, vocaux, tickets et abonnements" />
+  <link rel="stylesheet" href="style.css" id="css-base">
+  <link rel="stylesheet" href="style-kirby.css" id="css-kirby" media="not all">
+  <link rel="stylesheet" href="theme.css">
+  <script>try{if(localStorage.getItem("portfolio-mode")==="kirby"){document.documentElement.classList.add("kirby");document.getElementById("css-base").media="not all";document.getElementById("css-kirby").media="all"}}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+  <div class="bg-shape shape-tl">
+    <svg viewBox="0 0 200 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M-10,40 C50,60 80,10 100,-10" fill="none" stroke="#2c3545" stroke-width="0.8"/>
+      <path d="M-10,80 C60,100 120,40 140,-10" fill="none" stroke="#2c3545" stroke-width="0.8"/>
+    </svg>
+  </div>
+  <div class="bg-shape shape-bl">
+    <svg viewBox="0 0 200 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M-10,120 C60,120 80,160 120,210" fill="none" stroke="#2c3545" stroke-width="0.8"/>
+      <path d="M-10,160 C40,160 60,190 80,210" fill="none" stroke="#2c3545" stroke-width="0.8"/>
+    </svg>
+  </div>
+  <div class="bg-shape shape-br">
+    <svg viewBox="0 0 200 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M210,60 C150,80 120,140 80,210" fill="none" stroke="#2c3545" stroke-width="0.8"/>
+      <path d="M210,110 C160,120 140,170 120,210" fill="none" stroke="#2c3545" stroke-width="0.8"/>
+      <path d="M210,160 C180,165 170,190 160,210" fill="none" stroke="#2c3545" stroke-width="0.8"/>
+    </svg>
+  </div>
+  <div class="top-bar-wrapper">
+    <div class="top-line"></div>
+    <div class="top-text">#PORTFOLIO2026</div>
+  </div>
+  <nav>
+    <div class="nav-inner">
+      <div class="logo">Mathys.</div>
+      <div class="nav-links">
+        <a href="index.html#about">À propos</a>
+        <a href="index.html#skills">Compétences</a>
+        <a href="index.html#projects">Projets</a>
+        <a href="index.html#cv">CV</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <main class="wrap project-detail">
+    <img class="kirby-deco" src="kirby/repos.png" alt="">
+    
+    <div class="project-header">
+      <h1 class="titre-Le-chat">Le Chat</h1>
+      <p classe="test">Bot Discord complet et modulaire pour la gestion communautaire</p>
+    </div>
+      <div class="tech-stack">
+        <span class="tech-badge">Node.js</span>
+        <span class="tech-badge">discord.js v14</span>
+        <span class="tech-badge">MySQL</span>
+      </div>
+    </div>
+
+    <div style="margin: 2rem 0; border-radius: 0.5rem; overflow: hidden;">
+      <img src="le-chat-bot.png" alt="Le Chat Discord Bot" class="img-chat">
+    </div>
+
+    <section class="features-section">
+      <h2>À propos du projet</h2>
+      <p>
+        Le Chat est un bot Discord complet développé en JavaScript (Node.js, discord.js v14), conçu pour offrir une solution de gestion et de modération complète pour les serveurs Discord. Avec une architecture modulaire basée sur des modules dédiés à chaque fonctionnalité et une base de données MySQL, il permet d'ajouter facilement de nouvelles fonctionnalités tout en gardant un code organisé.
+      </p>
+    </section>
+
+    <section class="features-section">
+      <h2>Fonctionnalités principales</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Modération avancée</h3>
+          <p>Commandes de modération complètes pour maintenir l'ordre sur le serveur :</p>
+          <ul class="feature-list">
+            <li>Kick, ban et unban</li>
+            <li>Mute / unmute temporisé</li>
+            <li>Système d'avertissements (warn, warns, clearwarns)</li>
+            <li>Suppression en masse de messages (clear)</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <h3>Automodération</h3>
+          <p>Filtrage automatique des messages en temps réel :</p>
+          <ul class="feature-list">
+            <li>Détection de mots interdits</li>
+            <li>Blocage des liens d'invitation Discord</li>
+            <li>Détection de spam (seuil de messages sur une fenêtre de temps)</li>
+            <li>Suppression automatique et sanction</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <h3>Système de logs complets</h3>
+          <p>Suivi détaillé de toute l'activité du serveur via des embeds :</p>
+          <ul class="feature-list">
+            <li>Arrivées et départs de membres</li>
+            <li>Messages supprimés et modifiés</li>
+            <li>Actions de modération</li>
+            <li>Événements du serveur</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <h3>Rôles & bienvenue</h3>
+          <p>Gestion des rôles et accueil des nouveaux membres :</p>
+          <ul class="feature-list">
+            <li>Menus de rôles par réaction, personnalisables (titre, description, image)</li>
+            <li>Ajout d'options de rôle avec emoji et libellé</li>
+            <li>Bannières de bienvenue et d'au revoir générées automatiquement</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <h3>Niveaux & activité vocale</h3>
+          <p>Un système de progression pour récompenser l'activité :</p>
+          <ul class="feature-list">
+            <li>XP et niveaux par message (voir, classement, ajouter, définir, reset)</li>
+            <li>Suivi du temps passé en vocal, avec classement</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <h3>Tickets & abonnements</h3>
+          <p>Des outils pratiques pour la communauté :</p>
+          <ul class="feature-list">
+            <li>Panneau de tickets avec ouverture/fermeture par bouton</li>
+            <li>Suivi d'abonnements personnels (Netflix, Spotify, etc.) avec cycle de renouvellement</li>
+            <li>Rappels automatiques avant échéance</li>
+            <li>Rappels de bump Disboard automatisés</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="architecture">
+      <h3>Architecture technique</h3>
+      <p>
+        Le bot est organisé en modules indépendants (un par fonctionnalité : modération, automod, logs, rôles, niveaux, vocal, tickets, abonnements, bump), chargés depuis un point d'entrée central. Cette approche offre plusieurs avantages :
+      </p>
+      <ul style="margin: 1rem 0 0 1.5rem;">
+        <li>Code organisé et facile à naviguer</li>
+        <li>Modules isolés et faciles à faire évoluer indépendamment</li>
+        <li>Déploiement et maintenance simplifiés</li>
+        <li>Extensibilité sans limite</li>
+      </ul>
+      <p style="margin-top: 1rem;">
+        Les données persistantes (niveaux, vocal, abonnements, configuration des rôles) sont stockées dans une base de données MySQL.
+      </p>
+    </section>
+
+    <section class="features-section">
+      <h2>Technologies utilisées</h2>
+      <ul style="line-height: 2;">
+        <li><strong>Node.js</strong> : Environnement d'exécution JavaScript</li>
+        <li><strong>discord.js v14</strong> : Bibliothèque pour l'intégration Discord</li>
+        <li><strong>MySQL</strong> : Stockage des données persistantes</li>
+      </ul>
+    </section>
+
+    <section class="features-section">
+      <h2>Apprentissages clés</h2>
+      <p>
+        Ce projet m'a permis de développer mes compétences en :
+      </p>
+      <ul style="line-height: 2; margin-left: 1.5rem;">
+        <li>Architecture de projets Node.js complexes et modulaires</li>
+        <li>Gestion de bases de données MySQL</li>
+        <li>Intégration d'APIs (Discord API) et de webhooks</li>
+        <li>Modération automatisée et gestion d'erreurs</li>
+        <li>Conception de systèmes de progression (XP, niveaux, classements)</li>
+      </ul>
+    </section>
+
+    <section class="features-section">
+      <div class="project-links">
+        <a href="https://discord.gg/jkfqJP8gKe" target="_blank" class="btn-primary">Rejoindre le Discord</a>
+        <a href="https://github.com/StolnaFR/Le-chat-discord-bot" target="_blank" class="btn-primary">Voir sur GitHub</a>
+      </div>
+    </section>
+    <a class="btn" href="index.html#projects">← Retour aux projets</a>
+  </main>
+
+  <footer>
+    © 2026 — Mathys<small class="mention-stats">Statistiques de visite anonymes (page, pays, heure), sans cookies ni adresse IP.</small>
+  </footer>
+  <script src="theme.js"></script>
+  <script src="tracker.js" defer></script>
+</body>
+</html>

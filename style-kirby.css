@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap');
+
+/* ============ Thème Kirby sur tout le site ============ */
+:root {
+  --bg: #fff0f5;
+  --rose: #fbd9e3;
+  --rose-champ: #f9cfdc;
+  --bord: #f0b9ca;
+  --rouge: #c2185b;
+  --vin: #4a0d24;
+  --jaune: #f6c21b;
+  --text: #4a0d24;
+  --line: #f0b9ca;
+  --font-serif: 'Fredoka', 'Trebuchet MS', 'Segoe UI', Arial, sans-serif;
+  --font-sans: 'Trebuchet MS', 'Segoe UI', Arial, sans-serif;
+  --maxw: 1200px;
+  --ombre: drop-shadow(0 6px 10px rgba(74, 13, 36, .14));
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  color: var(--text);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  position: relative;
+  background-color: var(--bg);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cpath d='M30 20l3 7 7.5.7-5.7 5 1.8 7.4-6.6-4-6.6 4 1.8-7.4-5.7-5 7.5-.7z' fill='%23f6c21b' fill-opacity='.45'/%3E%3Cpath d='M130 100l2.4 5.6 6 .5-4.6 4 1.4 5.9-5.2-3.2-5.2 3.2 1.4-5.9-4.6-4 6-.5z' fill='%23f0b9ca' fill-opacity='.7'/%3E%3Ccircle cx='95' cy='40' r='4' fill='%23f9cfdc'/%3E%3Ccircle cx='50' cy='140' r='5' fill='%23f9cfdc'/%3E%3C/svg%3E");
+}
+::selection { background: var(--rouge); color: #fff; }
+
+/* les anciennes courbes de fond laissent la place aux étoiles */
+.bg-shape { display: none; }
+svg { width: 100%; height: 100%; }
+
+/* ---- Bandeau du haut ---- */
+.top-bar-wrapper {
+  position: relative;
+  padding: 30px 60px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.top-line {
+  position: absolute; top: 50%; left: 0; right: 0;
+  border-top: 4px dotted var(--bord);
+  z-index: 1;
+}
+.top-text {
+  position: relative; z-index: 2;
+  padding: 6px 20px;
+  border-radius: 30px;
+  background: var(--rouge);
+  color: #fff;
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+/* ---- Navigation ---- */
+nav { padding: 20px 20px 0; }
+.nav-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 10px 14px 10px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: 3px solid var(--bord);
+  border-radius: 40px;
+  filter: var(--ombre);
+}
+.logo {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--rouge);
+}
+.logo::after { content: " ★"; color: var(--jaune); -webkit-text-stroke: 1px #8b1038; }
+.nav-links { display: flex; gap: 6px; flex-wrap: wrap; }
+.nav-links a {
+  color: var(--vin);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  padding: 9px 16px;
+  border-radius: 30px;
+  transition: background .2s, color .2s, transform .15s;
+}
+.nav-links a:hover { background: var(--rouge); color: #fff; }
+.nav-links a:active { transform: scale(.95); }
+
+/* ---- Base ---- */
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 80px 40px; }
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--vin);
+  margin: 0;
+}
+h2 {
+  font-size: 46px;
+  margin-bottom: 56px;
+  text-align: center;
+  color: var(--rouge);
+}
+h2::before, h2::after {
+  content: "★";
+  display: inline-block;
+  margin: 0 16px;
+  font-size: .55em;
+  vertical-align: middle;
+  color: var(--jaune);
+  -webkit-text-stroke: 1.5px #8b1038;
+}
+p { line-height: 1.8; font-weight: 700; color: var(--vin); text-align: center; }
+
+/* ---- Hero ---- */
+.hero { min-height: 65vh; display: flex; align-items: center; }
+.hero-content-wrapper {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%; gap: 40px;
+}
+.hero-main { display: flex; align-items: center; gap: 30px; }
+.hero h1 { font-size: 80px; line-height: 1.1; letter-spacing: -1px; color: var(--vin); }
+.divider { margin-left: 15px; font-size: 80px; vertical-align: middle; color: var(--bord); }
+
+.hero-desc {
+  max-width: 400px;
+  padding: 22px 28px;
+  background: #fff;
+  border: 3px solid var(--bord);
+  border-radius: 30px;
+  filter: var(--ombre);
+}
+.hero-desc p { font-size: 16px; line-height: 1.7; margin: 0; text-align: left; }
+
+.hero-image { position: relative; }
+.hero-image img {
+  display: block;
+  width: 300px; height: 400px;
+  object-fit: cover;
+  padding: 12px;
+  background: #fff;
+  border: 4px solid var(--bord);
+  border-radius: 44px;
+  transform: rotate(-2deg);
+  filter: var(--ombre);
+}
+.hero-image::after {
+  content: "";
+  position: absolute;
+  right: -46px; bottom: -34px;
+  width: 120px; height: 144px;
+  background: url("kirby/repos.png") center / contain no-repeat;
+  animation: flotte 3s ease-in-out infinite;
+}
+@keyframes flotte { 50% { transform: translateY(-10px) rotate(4deg); } }
+
+/* ---- À propos / CV ---- */
+.content-box {
+  display: flex; align-items: center; justify-content: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 44px;
+  background: #fff;
+  border: 3px solid var(--bord);
+  border-radius: 44px;
+  filter: var(--ombre);
+}
+.content-box p { font-size: 18px; margin: 0; }
+.content-box .btn { margin-top: 0; flex: none; }
+.avatar-img {
+  width: 250px; height: 320px; object-fit: cover;
+  padding: 12px; background: #fff;
+  border: 3px solid var(--bord); border-radius: 36px;
+}
+
+/* ---- Compétences ---- */
+.skills { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+.skill {
+  padding: 12px 34px;
+  background: #fff;
+  border: 3px solid var(--bord);
+  border-radius: 999px;
+  color: var(--vin);
+  font-family: var(--font-serif);
+  font-size: 21px;
+  font-weight: 500;
+  transition: background .2s, color .2s, border-color .2s, transform .15s;
+}
+.skill:hover { background: var(--rouge); border-color: var(--rouge); color: #fff; transform: translateY(-4px) rotate(-2deg); }
+
+/* ---- Cartes projets ---- */
+.projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 36px; }
+.project {
+  position: relative;
+  padding: 44px 32px 40px;
+  text-align: center;
+  background: #fff;
+  border: 3px solid var(--bord);
+  border-radius: 40px;
+  filter: var(--ombre);
+  transition: transform .2s, border-color .2s;
+}
+.project:hover { transform: translateY(-6px); border-color: var(--rouge); }
+.project::before {
+  content: "★";
+  position: absolute; top: -22px; left: 50%;
+  transform: translateX(-50%);
+  font-size: 38px;
+  color: var(--jaune);
+  -webkit-text-stroke: 1.5px #8b1038;
+}
+.project h3 { font-size: 28px; margin-bottom: 18px; color: var(--rouge); }
+
+/* ---- Boutons : même style que « Envoyer » ---- */
+.btn, .btn-primary {
+  display: inline-block;
+  margin-top: 26px;
+  padding: 11px 28px;
+  border: 3px solid var(--rouge);
+  border-radius: 30px;
+  background: var(--rouge);
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  transition: background .2s, color .2s, transform .15s;
+}
+.btn:hover, .btn:focus-visible, .btn-primary:hover, .btn-primary:focus-visible {
+  background: #fff; color: var(--rouge); outline: none; opacity: 1;
+}
+.btn:active, .btn-primary:active { transform: scale(.97); }
+
+/* ============ Formulaire de contact — version Kirby ============ */
+.kirby-panel {
+  --rose: #fbd9e3;
+  --rose-champ: #f9cfdc;
+  --bord: #f0b9ca;
+  --rouge: #c2185b;
+  --vin: #4a0d24;
+  --erreur: #d0103a;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 24px;
+  border-radius: 40px;
+  background: var(--rose);
+  border: 3px solid var(--bord);
+  box-shadow: 0 8px 0 rgba(240, 185, 202, .55);
+  font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+  overflow: hidden;
+}
+
+.kirby-form .scene {
+  --vx: 90px;
+  --vy: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nuage {
+  position: relative;
+  flex: 0 1 440px;
+  width: 100%;
+  max-width: 440px;
+  padding: 84px clamp(40px, 13%, 58px) 80px;
+}
+
+.nuage-forme {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 6px 10px rgba(74, 13, 36, 0.14));
+}
+
+.contenu {
+  position: relative;
+}
+
+.groupe {
+  margin-bottom: 10px;
+}
+
+.kirby-form label {
+  display: block;
+  margin: 0 0 4px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--vin);
+}
+
+.champ {
+  position: relative;
+}
+
+.kirby-form .champ input,
+.kirby-form .champ textarea {
+  display: block;
+  width: 100%;
+  padding: 10px 40px 10px 16px;
+  border: 3px solid var(--bord);
+  border-radius: 30px;
+  background: var(--rose-champ);
+  outline: none;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--vin);
+  transition: border-color .2s, background .2s;
+}
+
+.kirby-form .champ textarea {
+  resize: none;
+  border-radius: 22px;
+  line-height: 1.4;
+}
+
+.kirby-form .champ input:focus,
+.kirby-form .champ textarea:focus {
+  border-color: var(--rouge);
+  background: #fbd3df;
+}
+
+.champ.invalide input,
+.champ.invalide textarea {
+  border-color: var(--erreur);
+}
+
+.etoile-champ,
+.etoile-jaune {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+}
+
+.etoile-champ { right: 14px; top: 11px; fill: #fff; }
+
+.etoile-jaune {
+  left: 12px;
+  top: 9px;
+  width: 24px;
+  height: 24px;
+  fill: #f6c21b;
+  stroke: #8b1038;
+  stroke-width: 1.5;
+  display: none;
+}
+
+.champ.invalide .etoile-jaune {
+  display: block;
+  animation: pop .5s ease-out;
+}
+
+.piege {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.kirby-form .envoyer {
+  display: block;
+  width: 100%;
+  margin: 14px 0 0;
+  padding: 11px 20px;
+  border: 3px solid var(--rouge);
+  border-radius: 30px;
+  background: var(--rouge);
+  color: #fff;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  cursor: pointer;
+  transition: background .2s, color .2s, transform .15s;
+}
+
+.kirby-form .envoyer:hover,
+.kirby-form .envoyer:focus-visible {
+  background: #fff;
+  color: var(--rouge);
+  outline: none;
+}
+
+.kirby-form .envoyer:active { transform: scale(.97); }
+
+.kirby-form #message {
+  min-height: 16px;
+  margin: 10px 0 0 12px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: left;
+  color: var(--erreur);
+}
+
+.kirby-form #message.ok { color: var(--rouge); }
+
+/* Les champs s'envolent vers Kirby quand il les avale */
+.kirby-form .vole {
+  transition: transform .5s ease-in, opacity .5s ease-in;
+  transform: translate(var(--vx), var(--vy)) scale(.4);
+  opacity: 0;
+}
+.kirby-form .groupe:nth-of-type(2).vole { transition-delay: .06s; }
+.kirby-form .groupe:nth-of-type(3).vole { transition-delay: .12s; }
+.kirby-form .envoyer.vole { transition-delay: .18s; }
+
+#kirby {
+  display: block;
+  width: 190px;
+  height: auto;
+  margin-left: -34px;
+  flex: none;
+  transform-origin: 50% 90%;
+  transition: transform .2s;
+}
+
+.attentif #kirby { transform: rotate(-4deg); }
+.avale #kirby    { animation: gulp .6s ease-in-out; }
+.rejet #kirby    { animation: secoue .4s ease-in-out; }
+.facteur #kirby  { animation: rebond .7s ease-out; }
+
+@keyframes gulp {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.1, .92); }
+  100% { transform: scale(1); }
+}
+@keyframes secoue {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+@keyframes rebond {
+  0%   { transform: translateY(0); }
+  35%  { transform: translateY(-16px); }
+  60%  { transform: translateY(0); }
+  78%  { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+@keyframes pop {
+  0%   { transform: scale(0) rotate(-90deg); }
+  70%  { transform: scale(1.3) rotate(15deg); }
+  100% { transform: scale(1) rotate(0); }
+}
+
+@media (max-width: 720px) {
+  .kirby-panel { padding: 36px 12px 28px; }
+  .kirby-form .scene {
+    --vx: 0px;
+    --vy: 130px;
+    flex-direction: column;
+  }
+  .nuage { flex: none; }
+  #kirby { width: 150px; margin: -26px 0 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kirby-form * { animation: none !important; transition: none !important; }
+}
+
+footer {
+  position: relative;
+  text-align: center;
+  padding: 64px 20px 28px;
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--vin);
+  border-top: 4px dotted var(--bord);
+  margin-top: 90px;
+  margin-bottom: 20px;
+}
+footer::before {
+  content: "";
+  position: absolute;
+  top: -66px; left: 50%;
+  width: 88px; height: 106px;
+  transform: translateX(-50%);
+  background: url("kirby/facteur.png") center / contain no-repeat;
+}
+
+/* ---- Pages détail (jeu, bots) ---- */
+section.wrap ul {
+  list-style: none; padding: 0;
+  max-width: 800px; margin: 0 auto 40px;
+}
+section.wrap ul li {
+  padding: 14px 8px;
+  border-bottom: 3px dotted var(--bord);
+  font-family: var(--font-serif);
+  font-size: 21px;
+  text-align: center;
+}
+section.wrap > img {
+  display: block; max-width: 100%;
+  margin: 0 auto 40px; padding: 10px;
+  background: #fff; border: 3px solid var(--bord); border-radius: 32px;
+}
+section.wrap > p { max-width: 800px; margin: 0 auto 40px; font-size: 18px; }
+section.wrap h3 { font-size: 30px; margin: 60px 0 30px; text-align: center; color: var(--rouge); }
+
+.project-detail { max-width: 900px; margin: 0 auto; }
+.back-link { display: inline-block; margin-bottom: 2rem; color: var(--rouge); font-weight: 700; text-decoration: none; }
+.back-link:hover { text-decoration: underline; }
+
+.project-header { margin-bottom: 2rem; }
+.project-header h1, .titre-Le-chat {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--rouge);
+  margin: 1rem 0 .5rem;
+  text-align: center;
+}
+
+.tech-stack { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin: 0 0 1rem; }
+.tech-badge {
+  padding: 8px 18px;
+  background: var(--rouge);
+  border-radius: 999px;
+  color: #fff;
+  font-size: .85rem;
+  font-weight: 700;
+}
+
+.features-section { margin: 2.5rem 0; }
+.features-section h2 { font-size: 2rem; margin-bottom: 1.5rem; }
+.features-section h2::before, .features-section h2::after { margin: 0 10px; }
+.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+
+.feature-card, .architecture {
+  background: #fff;
+  padding: 1.6rem;
+  border: 3px solid var(--bord);
+  border-radius: 32px;
+  filter: var(--ombre);
+}
+.architecture { padding: 2rem; margin: 2rem 0; }
+.feature-card h3, .architecture h3 { font-size: 1.25rem; margin: 0 0 .75rem; color: var(--rouge); text-align: center; }
+.feature-card p { margin: 0; font-size: .95rem; line-height: 1.6; }
+
+.feature-list { list-style: none; padding: 0; margin: .5rem 0 0; }
+.feature-list li { position: relative; padding: .4rem 0 .4rem 1.8rem; font-size: .95rem; font-weight: 700; text-align: left; }
+.feature-list li::before {
+  content: "★";
+  position: absolute; left: 0;
+  color: var(--jaune);
+  -webkit-text-stroke: 1px #8b1038;
+}
+.features-section ul, .architecture ul { color: var(--vin); font-weight: 700; }
+
+.project-links { display: flex; gap: 1rem; margin: 2rem 0; flex-wrap: wrap; justify-content: center; }
+.project-links .btn-primary { margin-top: 0; }
+
+.project-image { margin: 2rem auto; border-radius: 32px; overflow: hidden; width: 50%; }
+.project-image img { width: 100%; height: auto; display: block; }
+.img-chat {
+  display: block; width: 40%; height: auto; margin: auto;
+  padding: 8px; background: #fff;
+  border: 3px solid var(--bord); border-radius: 32px;
+}
+.description-project { font-size: 1.1rem; color: var(--vin); margin-top: .5rem; text-align: center; }
+
+/* ---- Mascotte des pages détail ---- */
+html.kirby .kirby-deco {
+  display: block !important;
+  width: 96px;
+  max-width: 96px;
+  height: auto;
+  margin: 0 auto -6px;
+  padding: 0;
+  border: 0;
+  background: none;
+  animation: flotte 3s ease-in-out infinite;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .hero-content-wrapper, .hero-main { flex-direction: column; align-items: flex-start; }
+  .hero h1 { font-size: 58px; }
+  .divider { display: none; }
+  .hero-desc { max-width: 100%; margin-top: 20px; }
+}
+@media (max-width: 768px) {
+  .wrap { padding: 60px 20px; }
+  h2 { font-size: 34px; }
+  .hero h1 { font-size: 44px; }
+  .content-box { flex-direction: column; padding: 28px 22px; }
+  .avatar-img { width: 100%; max-width: 300px; }
+  .top-bar-wrapper { padding: 20px 20px 0; }
+  .nav-inner { flex-direction: column; gap: 8px; padding: 12px; border-radius: 30px; }
+  .nav-links { justify-content: center; gap: 2px; }
+  .nav-links a { font-size: 11px; padding: 7px 10px; }
+  .hero-image { margin: 0 auto; }
+  .hero-image::after { right: -30px; width: 96px; height: 116px; }
+  .img-chat, .project-image { width: 80%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-image::after, html.kirby .kirby-deco { animation: none; }
+  .project, .skill, .btn, .nav-links a { transition: none; }
+}
